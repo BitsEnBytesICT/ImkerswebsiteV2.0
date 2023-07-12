@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "../layout/home";
-import Agenda from "../../pages/agenda"
+import Agenda from "../layout/agenda"
 import Nieuws from "../layout/nieuws";
 import Bijenzwerm from "../layout/bijenzwerm";
 import Vrienden from "../layout/vrienden";
