@@ -700,6 +700,7 @@ ol > li {
 
 .auth {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -708,12 +709,25 @@ ol > li {
 
 .login-form {
     display: flex;
+    align-items: center;
     justify-content: center;
     background-color: lightgray;
+    height: 45%;
+    width: 35%;
     border-radius: 10px;
 }
 
 .login-form > div input {
+    height: 5vh;
+    width: 15vw;
     border-radius: 10px;
     border: 1px solid #FF8A00;
+}
+
+.login-form > div input::placeholder {
+    text-align: center;
+}
+
+.login-form > div button {
+
 }
