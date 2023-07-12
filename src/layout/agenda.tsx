@@ -3,7 +3,7 @@ import React, {Component, useEffect, useRef, useState} from "react";
 import { NavLink } from 'react-router-dom';
 
 // Css Import
-import '../resources/css';
+import '../resources/css/App.css';
 
 // Components Import
 import Header from "./components/header";

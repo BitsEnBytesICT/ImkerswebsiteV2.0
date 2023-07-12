@@ -8,6 +8,7 @@ import Projecten from "../layout/projecten";
 import {
     createBrowserRouter
 } from "react-router-dom";
+import { Login } from "../layout/login";
 
 const paths = [
     {
@@ -33,6 +34,10 @@ const paths = [
     {
         path: "/projecten",
         element: <Projecten/>
+    },
+    {
+        path: "/login",
+        element: <Login/>
     }
 ]
 export const router = createBrowserRouter(paths)
