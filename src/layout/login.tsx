@@ -1,6 +1,6 @@
-import '../resources/css/App.css';
-import Header from './components/header';
-import Honeycomb from './components/honeycomb';
+// Css Import
+import '../resources/css/Admin.css';
+
 
 export const Login = (): JSX.Element => {
 
