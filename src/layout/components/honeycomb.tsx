@@ -2,7 +2,7 @@
 import React, {Component, useRef, useEffect, useState} from 'react';
 import { NavLink } from 'react-router-dom';
 
-// Css Import
+// CSS Import
 import '../../resources/css/App.css'
 
 // Importing Images

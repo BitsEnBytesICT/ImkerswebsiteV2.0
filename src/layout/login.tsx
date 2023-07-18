@@ -1,4 +1,4 @@
-// Css Import
+// CSS Import
 import '../resources/css/Admin.css';
 
 
@@ -9,7 +9,7 @@ export const Login = (): JSX.Element => {
     }
 
     return (
-        <div className='admin-login flex flex-col h-screen bg-yellow-700'>
+        <div className='admin-login flex flex-col h-screen'>
             <div className="auth">
                 <div className="login-form">
                     <div className='master-key'>

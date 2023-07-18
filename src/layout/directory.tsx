@@ -2,8 +2,11 @@
 import React, {Component, useEffect, useRef, useState} from "react";
 import { NavLink } from 'react-router-dom';
 
-// Css Import
+// CSS Import
 import '../resources/css/Admin.css';
+
+// JSON Import
+import '../resources/data/data.json';
 
 export const Directory = (): JSX.Element => {
 
@@ -13,16 +16,11 @@ export const Directory = (): JSX.Element => {
 
     return (
         <>
-            <div id="homeRoot" className="h-screen">
-                {/* bg-yellow-500  */}
+            <div className="admin-login flex flex-col h-screen">
 
                 <main>
                     <div className="container-directory">
-                        
-
-
-
-                        
+                        <h1></h1>
                     |- pages/
                        |-  home.tsx
                        |-  agenda.tsx
