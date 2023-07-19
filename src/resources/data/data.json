@@ -1,3 +1,28 @@
 {
-    
-}
+    "directoryView": [
+       {
+         "parent-element": "root",
+         "child-elements": [
+           "home",
+           "agenda",
+           "nieuws",
+           "bijenzwerm",
+           "vrienden",
+           "projecten",
+           "bijenhouden",
+           "contact"
+         ]
+       },
+       {
+         "parent-element": "agenda",
+         "childElements": [
+           "cursussen",
+           "lezingen",
+           "workshops",
+           "imkercafe",
+           "loi",
+           "vergaderingen"
+         ]
+       }
+    ]
+  }

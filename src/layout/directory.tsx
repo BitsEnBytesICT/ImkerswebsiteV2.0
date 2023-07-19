@@ -6,7 +6,27 @@ import { NavLink } from 'react-router-dom';
 import '../resources/css/Admin.css';
 
 // JSON Import
-import '../resources/data/data.json';
+import data from '../resources/data/data.json';
+
+console.log(data)
+
+function directoryView(parentElement : any, horizontalIndex : number) : any {
+    if (parentElement.parentElement == "root") {
+        // Styling for root 
+    } 
+    else if (parentElement.childElements.lenght === 0) {
+        // Styling for parent element without children
+    }
+    
+
+    for (let i = 0; i < parentElement.childElements.length; i++) {
+        // Find object where parent element == parentElement.childElements[i]
+        directoryView(parentElement.childElements[i], horizontalIndex++)
+    }
+
+
+    //return styling
+}
 
 export const Directory = (): JSX.Element => {
 
@@ -20,18 +40,10 @@ export const Directory = (): JSX.Element => {
 
                 <main>
                     <div className="container-directory">
-                        <h1></h1>
-                    |- pages/
-                       |-  home.tsx
-                       |-  agenda.tsx
-                           |-  cursussen.tsx 
-                       |-  nieuws.tsx
-                       |-  bijenzwerm.tsx
-                       |-  vrienden.tsx
-                       |-  projecten.tsx
-                       |-  informatie.tsx
-                       |-  bijenhouden.tsx
-                       |-  contact.tsx
+
+                        <div className="container-root">
+                            { directoryView(data, 0) }
+                        </div>
 
                     </div>
                 </main>
