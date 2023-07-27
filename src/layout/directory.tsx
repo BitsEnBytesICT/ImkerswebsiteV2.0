@@ -8,24 +8,34 @@ import '../resources/css/Admin.css';
 // JSON Import
 import data from '../resources/data/data.json';
 
-console.log(data)
+console.log(data.directoryView)
 
-function directoryView(parentElement : any, horizontalIndex : number) : any {
-    if (parentElement.parentElement == "root") {
-        // Styling for root 
-    } 
-    else if (parentElement.childElements.lenght === 0) {
+function directoryView(parentElement: any, horizontalIndex: number): any {
+    console.log(parentElement)
+    console.log(horizontalIndex)
+    let styling = ""
+    if (parentElement.childElements.length === 0) {
         // Styling for parent element without children
+        styling += parentElement.parentElement + " no children\n"
+    }
+    else if (parentElement.parentElement == "root") {
+        // Styling for root 
+        styling += parentElement.parentElement + " root\n"
+    }
+    else {
+        styling += parentElement.parentElement + " with children\n"
     }
     
 
     for (let i = 0; i < parentElement.childElements.length; i++) {
-        // Find object where parent element == parentElement.childElements[i]
-        directoryView(parentElement.childElements[i], horizontalIndex++)
+        const index = data.directoryView.findIndex(d => d.parentElement == parentElement.childElements[i])
+        console.log(index)
+        if (index == -1) continue
+        styling += directoryView(data.directoryView[index], horizontalIndex++)
     }
 
 
-    //return styling
+    return styling
 }
 
 export const Directory = (): JSX.Element => {
@@ -42,7 +52,7 @@ export const Directory = (): JSX.Element => {
                     <div className="container-directory">
 
                         <div className="container-root">
-                            { directoryView(data, 0) }
+                            {directoryView(data.directoryView[0], 0) }
                         </div>
 
                     </div>
